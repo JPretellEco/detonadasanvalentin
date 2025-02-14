@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Divertida</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://img.freepik.com/vector-gratis/fondo-plano-san-valentin_52683-55565.jpg?semt=ais_hybrid');
+            background-repeat: repeat;
+            background-size: 150px 150px;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: rgba(52, 73, 94, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        .yes {
+            background: #2ecc71;
+            color: white;
+        }
+        .no {
+            background: #e74c3c;
+            color: white;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            let noButton = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <div class="card">
+        <img src="CasoSiniestros/EDA/miguel.png" alt="Imagen divertida">
+        <h1>¿Aceptas una detonada tremenda?</h1>
+        <div class="buttons">
+            <button class="button yes" onclick="alert('¡Buena elección!')">Sí</button>
+            <button class="button no" id="noButton" onmouseover="moveNoButton()">No</button>
+        </div>
+    </div>
+</body>
+</html>
