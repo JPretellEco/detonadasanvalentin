@@ -52,6 +52,22 @@
             color: white;
             position: absolute;
         }
+        .roses {
+            font-size: 20px;
+        }
+        .gif-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .gif-container img {
+            max-width: 100%;
+        }
     </style>
     <script>
         function moveNoButton() {
@@ -61,16 +77,36 @@
             noButton.style.left = `${x}px`;
             noButton.style.top = `${y}px`;
         }
+
+        function showGif() {
+            document.getElementById("gifContainer").style.display = "block";
+            document.getElementById("song").play();
+        }
     </script>
 </head>
 <body>
     <div class="card">
-        <img src="CasoSiniestros/EDA/miguel.png" alt="Imagen divertida">
-        <h1>¿Aceptas una detonada tremenda?</h1>
+        <img src="oto.jpg" alt="Imagen divertida">
+        <p> 🔥 Susurros de fuego 🔥
+            
+            Tus labios, dulce pecado,
+            prometen noches sin final.
+            Tu piel, camino dorado,
+            me invita a arder sin piedad.
+            
+            Si el deseo es un delito,
+            cúlpame sin compasión.
+            Porque en tu cuerpo escrito,
+            llevo mi única absolución</p>
+        <h1>¿Aceptas una detonada tremenda? 😊</h1>
         <div class="buttons">
-            <button class="button yes" onclick="alert('¡Buena elección!')">Sí</button>
+            <button class="button yes" onclick="showGif()">Sí</button>
             <button class="button no" id="noButton" onmouseover="moveNoButton()">No</button>
         </div>
     </div>
+    <div id="gifContainer" class="gif-container">
+        <img src="homer-simpson.gif" alt="Celebración">
+    </div>
+    <audio id="song" src="oyegelda.mp3"></audio>
 </body>
 </html>
